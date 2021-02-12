@@ -1,5 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
+import { fetchCountries } from './script';
+
+fetchCountries();
 
 function App() {
   return (
