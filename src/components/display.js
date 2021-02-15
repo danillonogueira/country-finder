@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { fetchCountries, mapCountries } from './../misc/helpers';
+import { fetchCountries } from './../helpers/misc';
+import { mapCountries } from './../helpers/mappers';
 
 const StyledDisplay = styled.div`
   display: grid;

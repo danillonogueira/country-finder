@@ -1,7 +1,7 @@
 import React from 'react';
 import Select from './components/select';
 import Display from './components/display';
-import CssReset from './misc/cssReset';
+import CssReset from './helpers/cssReset';
 
 const App = () => {
   return (

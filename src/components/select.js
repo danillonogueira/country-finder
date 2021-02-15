@@ -1,10 +1,10 @@
-import Regions from './../misc/regions';
+import { mapRegions } from './../helpers/mappers';
 
 const Select = () => {
   return (
     <select>
       <option value="All" defaultValue>All</option>
-      {Regions.map((region, index) => <option key={index + 1} value={region}>{region}</option>)}
+      {mapRegions()}
     </select>
   );
 }
