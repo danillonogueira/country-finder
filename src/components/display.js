@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import fetchCountries from '../helpers/service';
-import Card from './card';
+import { mapCountries } from './../helpers/filters';
 
 const StyledDisplay = styled.div`
   display: grid;
@@ -19,16 +19,7 @@ const Display = () => {
       .catch(err => console.log(err));
   });
 
-  return <StyledDisplay>
-    {
-      countries.map((country, index) => {          
-        return <Card 
-          country={country} 
-          key={index + 1}
-        ></Card>;
-      })
-    }
-  </StyledDisplay>;
+  return <StyledDisplay>{mapCountries(countries)}</StyledDisplay>;
 };
 
 export default Display;
