@@ -1,4 +1,4 @@
-import Regions from './../mocks/regions';
+import Regions from './../misc/regions';
 
 const Select = () => {
   return (
