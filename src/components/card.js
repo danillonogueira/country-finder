@@ -7,11 +7,9 @@ const StyledCard = styled.div`
   flex-direction: column;
   max-width: 400px;
 `;
-
 const StyledImg = styled.img`
   max-width: 100%;
 `;
-
 const Card = ({ country }) => {
   const { flag, name, population, region, capital } = country;
 

@@ -18,19 +18,21 @@ class Display extends React.Component {
   componentDidMount() {
     fetchCountries()
       .then(res => res.json())
-      .then((countries) => this.setState({ countries }));
+      .then(countries => this.setState({ countries }))
+      .catch(err => console.log(err));
+  }
+
+  getCountries() {
+    return this.state.countries.map((country, index) => {          
+      return <Card 
+        country={country} 
+        key={index + 1}
+      ></Card>;
+    });
   }
 
   render() {
-    return (
-      <StyledDisplay>
-        {
-          this.state.countries.map((country, index) => {          
-            return <Card country={country} key={index + 1}></Card>;
-          })
-        }
-      </StyledDisplay>
-    );
+    return <StyledDisplay>{this.getCountries()}</StyledDisplay>;
   }
 }
 
