@@ -1,6 +1,6 @@
 import React from 'react';
 import Select from './components/select';
-import Container from './components/container';
+import Display from './components/display';
 import CssReset from './helpers/cssReset';
 
 const App = () => {
@@ -8,7 +8,7 @@ const App = () => {
     <React.Fragment>
       <CssReset />
       <Select></Select>
-      <Container></Container>
+      <Display></Display>
     </React.Fragment>
   );
 };

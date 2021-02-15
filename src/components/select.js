@@ -1,6 +1,6 @@
 import Regions from './../mocks/regions';
 
-function Select() {
+const Select = () => {
   return (
     <select>
       <option value="All" defaultValue>All</option>

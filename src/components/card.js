@@ -12,7 +12,9 @@ const StyledImg = styled.img`
   max-width: 100%;
 `;
 
-function Card({ flag, name, population, region, capital }) {
+const Card = ({ country }) => {
+  const { flag, name, population, region, capital } = country;
+
   return (
     <StyledCard>
       <StyledImg alt="flag" src={flag}></StyledImg>
