@@ -1,13 +1,17 @@
 import React from 'react';
 import { fetchCountries } from './../helpers/service';
 import Card from './card';
+import styled from 'styled-components';
 
+const StyledContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-gap: 20px;
+`;
 class Container extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      countries: []
-    }
+    this.state = { countries: [] }
   }
 
   componentDidMount() {
@@ -18,7 +22,7 @@ class Container extends React.Component {
 
   render() {
     return (
-      <div className="container">
+      <StyledContainer>
         {
           this.state.countries.map((country, index) => {
             const { flag, name, population, region, capital } = country;
@@ -33,7 +37,7 @@ class Container extends React.Component {
             ></Card>;
           })
         }
-      </div>
+      </StyledContainer>
     );
   }
 }
