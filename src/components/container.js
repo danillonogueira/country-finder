@@ -17,23 +17,22 @@ class Container extends React.Component {
   }
 
   render() {
-    const cards = this.state.countries.map((country, index) => {
-      const { flag, name, population, region, capital } = country;
-      
-      return <Card
-        flag={flag}
-        name={name}
-        pop={population}
-        region={region}
-        capital={capital}
-        key={index + 1}
-      ></Card>;
-      
-    });
-
     return (
       <div className="container">
-        {cards}
+        {
+          this.state.countries.map((country, index) => {
+            const { flag, name, population, region, capital } = country;
+            
+            return <Card
+              flag={flag}
+              name={name}
+              population={population}
+              region={region}
+              capital={capital}
+              key={index + 1}
+            ></Card>;
+          })
+        }
       </div>
     );
   }

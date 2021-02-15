@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Card({ flag, name, pop, region, capital }) {
+function Card({ flag, name, population, region, capital }) {
   return (
     <div className="card">
       <img alt="flag" src={flag} />
       {name}
-      {pop}
+      {population}
       {region}
       {capital}
     </div>
