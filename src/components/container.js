@@ -1,12 +1,12 @@
 import React from 'react';
-import { fetchCountries } from './../helpers/service';
+import fetchCountries from './../helpers/service';
 import Card from './card';
 import styled from 'styled-components';
 
 const StyledContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 `;
 class Container extends React.Component {
   constructor(props) {

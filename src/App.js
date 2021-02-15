@@ -1,11 +1,16 @@
+import React from 'react';
+import Select from './components/select';
 import Container from './components/container';
+import CssReset from './helpers/cssReset';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
+    <React.Fragment>
+      <CssReset />
+      <Select></Select>
       <Container></Container>
-    </div>
+    </React.Fragment>
   );
-}
+};
 
 export default App;

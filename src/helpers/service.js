@@ -1,10 +1,5 @@
-// Available regions
-// 'Africa',
-// 'Americas',
-// 'Asia',
-// 'Europe',
-// 'Oceania'
-
-export const fetchCountries = function() {
+const fetchCountries = function() {
   return fetch('https://restcountries.eu/rest/v2/all');
 };
+
+export default fetchCountries;

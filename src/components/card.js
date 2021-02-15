@@ -2,10 +2,10 @@ import styled from 'styled-components';
 
 const StyledCard = styled.div`
   border: solid 1px #000;
-  max-width: 400px;
   border-radius: 4px;
   display: flex;
   flex-direction: column;
+  max-width: 400px;
 `;
 
 const StyledImg = styled.img`
