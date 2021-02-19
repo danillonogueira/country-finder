@@ -5,6 +5,7 @@ const StyledCard = styled.div`
   border-radius: 4px;
   display: flex;
   flex-direction: column;
+  justify-self: center;
   max-width: 400px;
 `;
 const StyledImg = styled.img`
