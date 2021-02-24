@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect } from 'react';
 import styled from 'styled-components';
 import { fetchCountries } from './../helpers/misc';
-import { mapCountries } from './../helpers/mappers';
+import { CountriesContext } from './../contexts/countriesContext';
+import Card from './../components/card';
 
 const StyledDisplay = styled.div`
   display: grid;
@@ -10,16 +11,32 @@ const StyledDisplay = styled.div`
 `;
 
 const Display = () => {
-  const [ countries, setCountries ] = useState([]);
+  const [ countriesState, countriesDispatch ] = useContext(CountriesContext);
 
   useEffect(() => {
     fetchCountries()
       .then(res => res.json())
-      .then(countries => setCountries(countries))
+      .then((countries) => {
+        countriesDispatch({ 
+          type: 'STORE_COUNTRIES',
+          payload: countries 
+        });
+      })
       .catch(err => console.log(err));
   });
 
-  return <StyledDisplay>{mapCountries(countries)}</StyledDisplay>;
+  return (
+    <StyledDisplay>
+      {countriesState.countries.map((country, index) => {
+        return (
+          <Card
+            country={country}
+            key={index + 1}
+          />
+        );
+      })}
+    </StyledDisplay>
+  );
 };
 
 export default Display;
