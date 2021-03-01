@@ -12,7 +12,7 @@ const reducer = (state, action) => {
   }
 };
 export const CountriesContextProvider = (props) => {
-  const [countriesState, countriesDispatch] = useReducer(reducer, { countries: [] });
+  const [ countriesState, countriesDispatch ] = useReducer(reducer, { countries: [] });
 
   return (
     <CountriesContext.Provider value={[countriesState, countriesDispatch]}>

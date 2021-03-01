@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import Regions from './../helpers/regions';
 
 const Select = () => {
-  const [ regionsState, regionsDispatch] = useContext(RegionsContext);
+  const [ regionsState, regionsDispatch ] = useContext(RegionsContext);
 
   const changeHandler = (value) => {
     regionsDispatch({

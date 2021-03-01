@@ -7,7 +7,7 @@ import { RegionsContextProvider } from './contexts/regionsContext';
 
 const App = () => {
   return (
-    <React.Fragment>
+    <>
       <CssReset />
       <RegionsContextProvider>
         <Select></Select>
@@ -15,7 +15,7 @@ const App = () => {
       <CountriesContextProvider>
         <Display></Display>
       </CountriesContextProvider>
-    </React.Fragment>
+    </>
   );
 };
 

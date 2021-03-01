@@ -10,10 +10,7 @@ const reducer = (state, action) => {
   }
 };
 export const RegionsContextProvider = (props) => {
-  const [
-    regionsState, 
-    regionsDispatch
-  ] = useReducer(reducer, { region: 'All' });
+  const [ regionsState, regionsDispatch ] = useReducer(reducer, { region: 'All' });
 
   return (
     <RegionsContext.Provider value={[regionsState, regionsDispatch]}>
